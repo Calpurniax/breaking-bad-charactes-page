@@ -24,24 +24,26 @@ function renderAllCharacters(dataArray) {
 //función para pintar cada personaje
 function renderCharacter(characterData) {
   const liElement = document.createElement('li');
+  const articleElement = document.createElement('article');
   const imgElement = document.createElement('img');
   const h3Element = document.createElement('h3');
   const h4Element = document.createElement('h4');
-  liElement.appendChild(imgElement);
-  liElement.appendChild(h3Element);
-  liElement.appendChild(h4Element);
+  liElement.appendChild(articleElement);
+  articleElement.appendChild(imgElement);
+  articleElement.appendChild(h3Element);
+  articleElement.appendChild(h4Element);
   imgElement.setAttribute('src', characterData.img);
   imgElement.setAttribute('alt', `${characterData.name}`);
   const h3Text = document.createTextNode(characterData.name);
   const statusText = document.createTextNode(characterData.status);
   h3Element.appendChild(h3Text);
   h4Element.appendChild(statusText);
-  //liElement.setAttribute('class', 'card');
+  articleElement.setAttribute('class', 'card');
   //imgElement.setAttribute('class', 'card_img');
   //h3Element.setAttribute('class', 'card_title');
-  //h4Element.setAttribute('class', 'card_race');
   //textElement.setAttribute('class', 'card_description');
   list.appendChild(liElement);
+  addEvent();
 }
 //filtrar
 function handleClick(event) {
@@ -56,3 +58,15 @@ function handleClick(event) {
     });
 }
 btnSearch.addEventListener('click', handleClick);
+//añadir a favoritos
+function handleFavourites(event) {
+  event.preventDefault();
+  console.log(event.currentTarget);
+}
+//añadir el evento de escucha a cada personaje
+function addEvent() {
+  const characters = document.querySelectorAll('.card');
+  for (const eachCharacter of characters) {
+    eachCharacter.addEventListener('click', handleFavourites);
+  }
+}
