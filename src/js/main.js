@@ -3,20 +3,20 @@
 const btnSearch = document.querySelector('.js-btn');
 const inputSearch = document.querySelector('.js-input');
 const list = document.querySelector('.js-list');
-const favList = document.querySelector('.js-favourite');
+//const favList = document.querySelector('.js-favourite');
 //Array
-let dataArray = [];
+let allCharacters = [];
 let searchList = [];
-let favourites = [];
+let favCharacters = [];
 //fetch
 fetch('https://breakingbadapi.com/api/characters')
   .then((response) => response.json())
   .then((data) => {
-    dataArray = data;
-    console.log(dataArray);
-    renderAllCharacters(dataArray);
+    allCharacters = data;
+    console.log(allCharacters);
+    renderAllCharacters(allCharacters);
   });
-//bucle para el array de datos
+//bucle para pintar un array
 function renderAllCharacters(dataArray) {
   for (const character of dataArray) {
     renderCharacter(character);
@@ -39,7 +39,7 @@ function renderCharacter(characterData) {
   const statusText = document.createTextNode(characterData.status);
   h3Element.appendChild(h3Text);
   h4Element.appendChild(statusText);
-  liElement.setAttribute('data-id', `${characterData.char_id}`);
+  articleElement.setAttribute('id', `${characterData.char_id}`);
   articleElement.setAttribute('class', 'card');
   //imgElement.setAttribute('class', 'card_img');
   //h3Element.setAttribute('class', 'card_title');
@@ -68,12 +68,18 @@ function handleFavourites(event) {
   if (target.classList.contains('favourite')) {
     target.classList.remove('favourite');
     const position = searchInArray(target);
-    favourites.splice(position, 1);
+    favCharacters.splice(position, 1);
   } else {
     target.classList.add('favourite');
-    favourites.push(target);
+    const idTarget = parseInt(target.id);
+    const selected = allCharacters.find(
+      (eachCharacter) => eachCharacter.char_id === idTarget
+    );
+    console.log(selected);
+    favCharacters.push(selected);
   }
-  renderAllCharacters(favourites);
+  console.log(favCharacters);
+  renderAllCharacters(favCharacters); //ahora mismo esta sumando cada personaje cada vez que sumas uno
 }
 //añadir el evento de escucha a cada personaje
 function addEvent() {
@@ -84,6 +90,14 @@ function addEvent() {
 }
 //buscar un elemento en el array
 function searchInArray(target) {
-  const index = favourites.indexOf(target);
+  const index = favCharacters.indexOf(target);
   return index;
 }
+//llamar a una tarjeta del array de datos
+/*function callData(idTarget) {
+  for (const character of allCharacters) {
+    if (character.char_id === idTarget) {
+      return character;
+    }
+  }
+}*/
