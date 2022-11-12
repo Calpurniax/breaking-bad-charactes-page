@@ -1,5 +1,4 @@
 /*@import 'core/variables';
-@import 'core/reset';
 @import 'components/code';
 @import 'components/links';
 @import 'layout/page';
@@ -7,6 +6,27 @@
 @import 'layout/footer';
 @import 'pages/index';
 */
+
+@import 'core/reset';
+
+.main{
+    display:flex;
+    flex-direction: row;
+    margin:5%;
+}
+.section__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 70%;
+    list-style: none;
+    &__article{   
+        max-width:50px;    
+        &--img{
+            max-width:40px;
+        }
+    }
+}
 .favourite{
     background-color: green;
     color: white;
