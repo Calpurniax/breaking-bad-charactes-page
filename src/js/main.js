@@ -3,10 +3,11 @@
 const btnSearch = document.querySelector('.js-btn');
 const inputSearch = document.querySelector('.js-input');
 const list = document.querySelector('.js-list');
-//const paragraph = document.querySelector('.js-favourite"');
+const favList = document.querySelector('.js-favourite');
 //Array
 let dataArray = [];
 let searchList = [];
+let favourites = [];
 //fetch
 fetch('https://breakingbadapi.com/api/characters')
   .then((response) => response.json())
@@ -38,6 +39,7 @@ function renderCharacter(characterData) {
   const statusText = document.createTextNode(characterData.status);
   h3Element.appendChild(h3Text);
   h4Element.appendChild(statusText);
+  liElement.setAttribute('data-id', `${characterData.char_id}`);
   articleElement.setAttribute('class', 'card');
   //imgElement.setAttribute('class', 'card_img');
   //h3Element.setAttribute('class', 'card_title');
@@ -62,6 +64,16 @@ btnSearch.addEventListener('click', handleClick);
 function handleFavourites(event) {
   event.preventDefault();
   console.log(event.currentTarget);
+  const target = event.currentTarget;
+  if (target.classList.contains('favourite')) {
+    target.classList.remove('favourite');
+    const position = searchInArray(target);
+    favourites.splice(position, 1);
+  } else {
+    target.classList.add('favourite');
+    favourites.push(target);
+  }
+  renderAllCharacters(favourites);
 }
 //añadir el evento de escucha a cada personaje
 function addEvent() {
@@ -69,4 +81,9 @@ function addEvent() {
   for (const eachCharacter of characters) {
     eachCharacter.addEventListener('click', handleFavourites);
   }
+}
+//buscar un elemento en el array
+function searchInArray(target) {
+  const index = favourites.indexOf(target);
+  return index;
 }
