@@ -17,8 +17,10 @@ fetch('https://breakingbadapi.com/api/characters')
     if (localStorage.getItem('favChar')) {
       favCharacters = JSON.parse(localStorage.getItem('favChar'));
       renderAllCharacters(favCharacters, favList);
+      markFavourites();
     }
   });
+
 //bucle para pintar un array
 function renderAllCharacters(dataArray, htmlList) {
   htmlList.innerHTML = '';
@@ -68,17 +70,17 @@ function handleFavourites(event) {
   event.preventDefault();
   console.log(event.currentTarget);
   const target = event.currentTarget;
-  if (target.classList.contains('favourite')) {
-    target.classList.remove('favourite');
-    const position = searchInArray(parseInt(target.id));
-    favCharacters.splice(position, 1);
-  } else {
+  if (searchInArray(parseInt(target.id)) === -1) {
     target.classList.add('favourite');
     favCharacters.push(
       allCharacters.find(
         (eachCharacter) => eachCharacter.char_id === parseInt(target.id)
       )
     );
+  } else {
+    target.classList.remove('favourite');
+    const position = searchInArray(parseInt(target.id));
+    favCharacters.splice(position, 1);
   }
   console.log(favCharacters);
   localStorage.setItem('favChar', JSON.stringify(favCharacters));
@@ -94,4 +96,19 @@ function addEvent() {
 //buscar un elemento en el array
 function searchInArray(target) {
   return favCharacters.findIndex((each) => each.char_id === target);
+}
+//marcar los que ya están en favoritos
+function markFavourites() {
+  for (const character of favCharacters) {
+    let favID = character.char_id;
+    let allID = allCharacters.find(
+      (eachCharacter) => eachCharacter.char_id === favID
+    );
+    if (allID) {
+      const characterCard = document.getElementById(allID.char_id);
+      characterCard.classList.add('favourite');
+    } else {
+      console.log('no es igual');
+    }
+  }
 }
