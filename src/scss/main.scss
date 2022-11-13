@@ -14,15 +14,16 @@
     display:flex;
     flex-direction: row;
     justify-content: space-between;
-    margin:5%;
-    height: 100vh
+    margin:5%;    
+    padding-bottom: 8vh;
+
 }
 .section__list{
     gap:10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 70%;
+    max-width: 80%;
     list-style: none;
     &__article{   
         display: flex;
