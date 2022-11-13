@@ -19,6 +19,7 @@ fetch('https://breakingbadapi.com/api/characters')
       renderAllCharacters(favCharacters, favList);
       markFavourites();
     }
+    addEvent();
   });
 
 //bucle para pintar un array
@@ -51,7 +52,6 @@ function renderCharacter(characterData, htmlList) {
   //h3Element.setAttribute('class', 'card_title');
   //textElement.setAttribute('class', 'card_description');
   htmlList.appendChild(liElement);
-  addEvent();
 }
 //filtrar
 function handleClick(event) {
@@ -107,8 +107,6 @@ function markFavourites() {
     if (allID) {
       const characterCard = document.getElementById(allID.char_id);
       characterCard.classList.add('favourite');
-    } else {
-      console.log('no es igual');
     }
   }
 }
