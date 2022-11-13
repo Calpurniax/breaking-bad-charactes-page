@@ -2,16 +2,18 @@
 @import 'components/code';
 @import 'components/links';
 @import 'layout/page';
-@import 'layout/header';
+
 @import 'layout/footer';
 @import 'pages/index';
 */
 
 @import 'core/reset';
+@import 'layout/header';
 
 .main{
     display:flex;
     flex-direction: row;
+    justify-content: space-between;
     margin:5%;
 }
 .section__list{
@@ -21,12 +23,13 @@
     max-width: 70%;
     list-style: none;
     &__article{   
-        max-width:50px;    
+        max-width:80px;    
         &--img{
-            max-width:40px;
+            max-width:60px;
         }
     }
 }
+
 .favourite{
     background-color: green;
     color: white;

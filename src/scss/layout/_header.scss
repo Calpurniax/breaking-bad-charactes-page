@@ -1,0 +1,14 @@
+.header {    
+    height: 30vh;
+    background-image: url("../images/cabecera-breaking-bad.jpg");    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;    
+    &__search{
+        padding-left: 5%;
+        
+    }
+}
