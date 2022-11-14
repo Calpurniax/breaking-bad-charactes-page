@@ -10,39 +10,44 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-.main{
-    display:flex;
+.main {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin:5%;    
+    margin: 5%;
     padding-bottom: 8vh;
-
 }
-.section__list{
-    gap:10px;
+
+.section__list {
+    gap: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 80%;
     list-style: none;
-    &__article{   
+
+    &__article {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 250px;
-        width: 200px;        
-        border: 1px black solid;  
-        gap:4px;     
-        &--img{
+        justify-content: center;
+        height: 380px;
+        width: 250px;
+        border: 1px $bordercolor solid;
+        gap: 2px;
+        word-wrap: break-word;
+
+        &--img {
             margin-top: 5%;
             margin-bottom: 5%;
-            max-width:90%;
-            height:170px
+            width: 80%;
+            height: 300px;
+            object-fit: cover;
         }
     }
 }
 
-.favourite{
-    background-color: green;
-    color: white;
+.favourite {
+    background-color: $favouritebackground;
+    color: $favouritefont;
 }
