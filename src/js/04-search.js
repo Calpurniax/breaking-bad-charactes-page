@@ -11,5 +11,6 @@ function handleSearch(event) {
       searchList = data;
       renderAllCharacters(searchList, list);
       addEvent();
+      markFavourites();
     });
 }

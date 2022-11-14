@@ -1,6 +1,38 @@
+.section__list {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 80%;
+    list-style: none;
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 380px;
+        width: 250px;
+        border: 1px $bordercolor solid;
+        gap: 2px;
+        word-wrap: break-word;
+
+        &--img {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 80%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
+
 .aside__favourite__li {
-    position: relative;
     @include favourite;
+
+    &--article {
+        position: relative;
+    }
 
     &--div {
         color: $cancelcolor;
