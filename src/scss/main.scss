@@ -1,8 +1,3 @@
-/*@import 'components/links';
-@import 'layout/page';
-@import 'pages/index';
-*/
-
 @import 'core/reset';
 @import 'core/variables';
 @import 'core/mixin';
@@ -16,8 +11,4 @@
     justify-content: space-between;
     margin: 5%;
     padding-bottom: 8vh;
-}
-
-.favourite {
-    @include favourite;
 }

@@ -1,3 +1,7 @@
+.favourite {
+    @include favourite;
+}
+
 .section__list {
     gap: 10px;
     display: flex;
