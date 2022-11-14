@@ -26,6 +26,7 @@ function handleFavourites(event) {
   }
   localStorage.setItem('favChar', JSON.stringify(favCharacters));
   renderAllCharacters(favCharacters, favList);
+  createReset();
 }
 //buscar un elemento en el array
 function searchInArray(target) {
@@ -37,6 +38,3 @@ function markFavourites() {
     document.getElementById(character.char_id).classList.add('favourite');
   }
 }
-/*function filterFav() {
-  return character.classList.contains('.aside__favourite__li') === false;
-}*/

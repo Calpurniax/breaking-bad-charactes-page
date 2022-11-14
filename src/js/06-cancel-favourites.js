@@ -2,11 +2,13 @@
 //funcion manejadora del evento "click" en la X de los favoritos
 function handleCancel(event) {
   handleFavourites(event);
-  unmarkFavourites(event);
+  unmarkFavourites(event.currentTarget.id);
 }
 //desmarcar como favoritos en el HTML principal
-function unmarkFavourites(event) {
-  document.getElementById(event.currentTarget.id).classList.remove('favourite');
+function unmarkFavourites(id) {
+  if (document.getElementById(id) != undefined) {
+    document.getElementById(id).classList.remove('favourite');
+  }
 }
 //llamar al HTML de la columna de favoritos y crear el evento para quitarlos
 function addCancelEvent() {
