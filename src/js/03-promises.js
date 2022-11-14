@@ -5,12 +5,12 @@ fetch('https://breakingbadapi.com/api/characters')
   .then((data) => {
     allCharacters = data;
     renderAllCharacters(allCharacters, list);
+    addEvent();
     if (localStorage.getItem('favChar')) {
       favCharacters = JSON.parse(localStorage.getItem('favChar'));
       renderAllCharacters(favCharacters, favList);
       markFavourites();
     }
-    addEvent();
   });
 //filtrar
 function handleClick(event) {

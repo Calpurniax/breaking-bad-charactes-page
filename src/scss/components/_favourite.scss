@@ -1,0 +1,16 @@
+.aside__favourite__li {
+    position: relative;
+    @include favourite;
+
+    &--div {
+        color: $cancelcolor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0.5rem;
+        padding: 0.3rem;
+        font-size: 18px;
+        border: solid 1px;
+        border-radius: 50%;
+    }
+}

@@ -42,3 +42,20 @@ function markFavourites() {
     }
   }
 }
+//llamar al HTML de la columna de favoritos
+function selectorFavinHtml() {
+  if (favCharacters) {
+    let favinHtml = document.querySelectorAll('.aside__favourite li');
+    for (let each of favinHtml) {
+      each.classList.add('aside__favourite__li');
+      const divCancel = document.createElement('div');
+      const textCancel = document.createTextNode('X');
+      divCancel.appendChild(textCancel);
+      divCancel.setAttribute('class', 'aside__favourite__li--div');
+      let favLi = document.querySelectorAll('.aside__favourite__li article');
+      for (const eachFav of favLi) {
+        eachFav.appendChild(divCancel);
+      }
+    }
+  }
+}

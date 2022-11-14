@@ -5,6 +5,7 @@ function renderAllCharacters(dataArray, htmlList) {
   for (const character of dataArray) {
     renderCharacter(character, htmlList);
   }
+  selectorFavinHtml();
 }
 //función para pintar cada personaje
 function renderCharacter(characterData, htmlList) {
