@@ -32,7 +32,7 @@ function handleFavourites(event) {
 function searchInArray(target) {
   return favCharacters.findIndex((each) => each.char_id === target);
 }
-//marcar los que ya están en favoritos
+//marcar en el HTML los que ya están en favoritos
 function markFavourites() {
   for (const character of favCharacters) {
     let favID = character.char_id;
@@ -52,9 +52,16 @@ function selectorFavinHtml() {
       const textCancel = document.createTextNode('X');
       divCancel.appendChild(textCancel);
       divCancel.setAttribute('class', 'aside__favourite__li--div');
-      let favLi = document.querySelectorAll('.aside__favourite__li article');
-      for (const eachFav of favLi) {
+      let favArticle = document.querySelectorAll(
+        '.aside__favourite__li article'
+      );
+      for (const eachFav of favArticle) {
         eachFav.appendChild(divCancel);
+        divCancel.setAttribute('id', `${eachFav.id}`);
+      }
+      let btnCancel = document.querySelectorAll('.aside__favourite__li--div');
+      for (const each of btnCancel) {
+        each.addEventListener('click', handleFavourites);
       }
     }
   }
