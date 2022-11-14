@@ -1,6 +1,5 @@
 'use strict';
-//evento para buscar
-btnSearch.addEventListener('click', handleClick);
+
 //añadir el evento de escucha a cada personaje, para marcarlo como favorito
 function addEvent() {
   const characters = document.querySelectorAll('.section__list__article');
@@ -42,6 +41,15 @@ function markFavourites() {
     }
   }
 }
+function handleCancel(event) {
+  handleFavourites(event);
+  unmarkFavourites(event);
+}
+function unmarkFavourites(event) {
+  console.log(event.currentTarget.id);
+  const characterCard = document.getElementById(event.currentTarget.id);
+  characterCard.classList.remove('favourite');
+}
 //llamar al HTML de la columna de favoritos
 function selectorFavinHtml() {
   if (favCharacters) {
@@ -61,7 +69,7 @@ function selectorFavinHtml() {
       }
       let btnCancel = document.querySelectorAll('.aside__favourite__li--div');
       for (const each of btnCancel) {
-        each.addEventListener('click', handleFavourites);
+        each.addEventListener('click', handleCancel);
       }
     }
   }
