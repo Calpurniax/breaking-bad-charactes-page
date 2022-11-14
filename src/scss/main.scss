@@ -1,7 +1,10 @@
 @import 'core/reset';
 @import 'core/variables';
 @import 'core/mixin';
-@import 'components/favourite';
+@import 'core/responsive';
+@import 'components/cards';
+@import 'components/tooltip';
+@import 'components/buttons';
 @import 'layout/header';
 @import 'layout/footer';
 

@@ -1,14 +1,24 @@
-.header {        
+.header {
     height: 30vh;
-    background-image: url("../images/header.jpg");    
+    background-image: url("../images/header.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;    
-    &__search{
+    justify-content: flex-end;
+
+    &__search {
         padding-left: 5%;
-        
+        display: flex;
+        align-items: flex-end;
+
+        &__input {
+
+            margin-right: 2%;
+            padding: 0.5%;
+            margin-bottom: 2%;
+
+        }
     }
 }

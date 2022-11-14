@@ -1,0 +1,26 @@
+//botón de reset
+.aside__favorite--reset {
+    padding: 5%;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $titlecolor;
+    background-color: $titlebackgcolor;
+    max-width: 40%;
+    border: none;
+}
+
+//botón de buscar
+.header__search__button {
+    margin-bottom: 2%;
+    padding: 1%;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $titlecolor;
+    background-color: $searchbtn;
+    border: solid 1px $titlecolor;
+    max-width: 40%;
+
+
+}

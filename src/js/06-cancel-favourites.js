@@ -17,9 +17,16 @@ function addCancelEvent() {
     for (let each of favinHtml) {
       each.classList.add('aside__favourite__li');
       const divCancel = document.createElement('div');
+      const divTooltip = document.createElement('div');
+      const TextContainerTooltip = document.createElement('span');
       const textCancel = document.createTextNode('X');
+      const textToolTip = document.createTextNode('borra de favoritos');
       divCancel.appendChild(textCancel);
+      TextContainerTooltip.appendChild(textToolTip);
+      divTooltip.appendChild(TextContainerTooltip);
+      TextContainerTooltip.setAttribute('class', 'tooltip__cancel__span');
       divCancel.setAttribute('class', 'aside__favourite__li--div');
+      divTooltip.setAttribute('class', 'tooltip__cancel');
       let favArticle = document.querySelectorAll(
         '.aside__favourite__li article'
       );
@@ -29,6 +36,7 @@ function addCancelEvent() {
           'section__list__article aside__favourite__li--article'
         );
         eachFav.appendChild(divCancel);
+        eachFav.appendChild(divTooltip);
         divCancel.setAttribute('id', `${eachFav.id}`);
       }
       let btnCancel = document.querySelectorAll('.aside__favourite__li--div');

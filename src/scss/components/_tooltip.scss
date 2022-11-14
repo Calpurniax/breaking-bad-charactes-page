@@ -1,0 +1,24 @@
+.tooltip__cancel {
+    position: relative;
+    transform: translate(-60px, -10px);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+
+    &__span {
+        font-size: 18px;
+        visibility: hidden;
+        background-color: $tooltipbkg;
+        padding: 3px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        transform: translate(-130px, -10px);
+        text-align: center;
+    }
+}
+
+.tooltip__cancel:hover .tooltip__cancel__span {
+    visibility: visible;
+
+}
