@@ -1,3 +1,8 @@
+# Module - 2: Final Evaluation
+
+Hi there! this is my final evaluation project for Adalab, hope you like it!
+You can see the final product here: http://beta.adalab.es/modulo-2-evaluacion-final-Calpurniax/
+
 > **First things first:** You need to have [Node JS](https://nodejs.org/) installed to run this project
 
 ### Steps to enjoy this lovely code I made:
