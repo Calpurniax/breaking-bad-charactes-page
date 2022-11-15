@@ -6,6 +6,9 @@ function renderAllCharacters(dataArray, htmlList) {
     renderCharacter(character, htmlList);
   }
   addCancelEvent();
+  if (dataArray === favCharacters) {
+    createReset();
+  }
 }
 //función para pintar cada personaje
 function renderCharacter(characterData, htmlList) {

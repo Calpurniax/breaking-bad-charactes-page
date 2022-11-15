@@ -26,7 +26,6 @@ function handleFavourites(event) {
   }
   localStorage.setItem('favChar', JSON.stringify(favCharacters));
   renderAllCharacters(favCharacters, favList);
-  createReset();
 }
 //buscar un elemento en el array
 function searchInArray(target) {

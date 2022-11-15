@@ -10,7 +10,5 @@ fetch('https://breakingbadapi.com/api/characters')
       favCharacters = JSON.parse(localStorage.getItem('favChar'));
       renderAllCharacters(favCharacters, favList);
       markFavourites();
-      addCancelEvent();
-      createReset();
     }
   });
