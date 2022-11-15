@@ -6,7 +6,7 @@ function handleCancel(event) {
 }
 //desmarcar como favoritos en el HTML principal
 function unmarkFavourites(id) {
-  if (document.getElementById(id) != undefined) {
+  if (document.getElementById(id)) {
     document.getElementById(id).classList.remove('favourite');
   }
 }

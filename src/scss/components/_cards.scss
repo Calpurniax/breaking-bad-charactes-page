@@ -5,10 +5,16 @@
 .section__list {
     gap: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     max-width: 80%;
     list-style: none;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
     &__article {
         text-align: center;
@@ -33,16 +39,25 @@
     }
 }
 
+
 .aside__favourite {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
 
+    @include desktop {
+        align-items: flex-end;
+    }
+
     &__li {
-        @include favourite;
+        flex-direction: column;
+        justify-content: center;
 
         &--article {
             position: relative;
+            @include favourite;
         }
 
         &--div {

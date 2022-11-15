@@ -1,0 +1,42 @@
+.main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 8vh;
+
+    @include tablet {
+        margin: 5%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 8vh;
+    }
+
+    @include desktop {
+        margin: 2%;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+
+        @include tablet {
+            align-items: flex-start;
+            text-align: left;
+        }
+
+    }
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    @include tablet {
+        justify-content: flex-start;
+    }
+}

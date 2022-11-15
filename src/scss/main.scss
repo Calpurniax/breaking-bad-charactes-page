@@ -8,15 +8,4 @@
 @import 'components/titles';
 @import 'layout/header';
 @import 'layout/footer';
-
-* {
-    box-sizing: border-box;
-}
-
-.main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 5%;
-    padding-bottom: 8vh;
-}
+@import 'pages/index';

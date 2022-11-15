@@ -11,5 +11,6 @@ fetch('https://breakingbadapi.com/api/characters')
       renderAllCharacters(favCharacters, favList);
       markFavourites();
       addCancelEvent();
+      createReset();
     }
   });

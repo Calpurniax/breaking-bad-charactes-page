@@ -1,7 +1,7 @@
 'use strict';
 //crear botón de reset
 function createReset() {
-  if (favCharacters != 0) {
+  if (favCharacters.length > 0) {
     const btnReset = document.createElement('button');
     btnReset.setAttribute('class', 'js-btn-reset aside__favorite--reset');
     favList.appendChild(btnReset);

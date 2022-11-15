@@ -1,8 +1,8 @@
 //botón de reset
 .aside__favorite--reset {
-    padding: 5%;
+    padding: 3%;
     border-radius: 6px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 700;
     color: $titlecolor;
     background-color: $titlebackgcolor;
@@ -11,6 +11,11 @@
 
     &:hover {
         cursor: pointer;
+    }
+
+    @include tablet {
+        font-size: 20px;
+        padding: 5%;
     }
 }
 

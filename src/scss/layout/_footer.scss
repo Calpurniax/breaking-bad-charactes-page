@@ -1,23 +1,27 @@
-.footer {    
+.footer {
     display: flex;
     align-items: center;
-    background-color:$footerbackground;
+    background-color: $footerbackground;
+    color: white;
     position: fixed;
-    bottom:0;
-    height:4vh;
-    color:white;
-    font-size: 1.7rem;
+    bottom: 0;
     width: 100%;
     padding-left: 5%;
     font-family: $fontfooter;
-    &__span{
+    height: 2.5vh;
+
+    @include tablet {
+        height: 4vh;
+        font-size: 1.7rem;
+    }
+
+    &__span {
         text-transform: uppercase;
-        background-color:$chemicalgreen;
+        background-color: $chemicalgreen;
         border: white solid 1px;
         padding-left: 0.5rem;
         padding-right: 0.5rem;
         padding-top: 0.1rem;
         padding-bottom: 0.1rem;
-        
     }
 }
