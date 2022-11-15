@@ -10,7 +10,6 @@
     max-width: 80%;
     list-style: none;
 
-
     &__article {
         text-align: center;
         font-size: 20px;
@@ -39,14 +38,6 @@
     flex-direction: column;
     gap: 10px;
 
-    &__title {
-        font-size: 25px;
-        padding: 5%;
-        background-color: $titlebackgcolor;
-        color: $titlecolor;
-        margin-bottom: 5%;
-    }
-
     &__li {
         @include favourite;
 
@@ -64,6 +55,10 @@
             padding: 0.3rem 0.5rem 0.3rem 0.5rem;
             border: solid 1.2px;
             border-radius: 50%;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

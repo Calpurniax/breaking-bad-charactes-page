@@ -8,6 +8,10 @@
     background-color: $titlebackgcolor;
     max-width: 40%;
     border: none;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 //botón de buscar
@@ -22,5 +26,7 @@
     border: solid 1px $titlecolor;
     max-width: 40%;
 
-
+    &:hover {
+        cursor: pointer;
+    }
 }

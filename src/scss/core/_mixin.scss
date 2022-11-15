@@ -2,3 +2,9 @@
     background-color: $favouritebackground;
     color: $favouritefont;
 }
+
+@mixin title {
+    background-color: $titlebackgcolor;
+    color: $titlecolor;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,14 @@
+.section__list__title {
+    font-size: 40px;
+    width: 60%;
+    padding: 3%;
+    @include title;
+}
+
+.aside__title {
+    width: 250px;
+    font-size: 25px;
+    padding: 5%;
+    @include title;
+
+}

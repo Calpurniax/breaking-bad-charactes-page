@@ -5,8 +5,13 @@
 @import 'components/cards';
 @import 'components/tooltip';
 @import 'components/buttons';
+@import 'components/titles';
 @import 'layout/header';
 @import 'layout/footer';
+
+* {
+    box-sizing: border-box;
+}
 
 .main {
     display: flex;
