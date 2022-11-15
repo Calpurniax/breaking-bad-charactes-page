@@ -20,6 +20,17 @@ npm install
 npm start
 ```
 
+## About the evaluation
+
+It consists on developing a web-site using HTML and Css/Sass and JS, with a free design. We were required to focus on JS side to practice some good stuff like:
+
+- fetch
+- array/objects
+- manipulate DOM
+- functions, loops, conditionals...
+- Github
+- never forget our friends Css/HTML
+
 #### About the code
 
 The project was typed with Visual Studio Code.

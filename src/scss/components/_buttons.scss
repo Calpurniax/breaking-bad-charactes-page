@@ -1,4 +1,4 @@
-//botón de reset
+/*-----button reset*/
 .aside__favorite--reset {
     padding: 3%;
     border-radius: 6px;
@@ -8,9 +8,13 @@
     background-color: $titlebackgcolor;
     max-width: 40%;
     border: none;
+    transition: color 1s, background-color 1s;
 
     &:hover {
         cursor: pointer;
+        color: $titlebackgcolor;
+        background-color: $titlecolor;
+        border: solid 1px $titlebackgcolor;
     }
 
     @include tablet {
@@ -19,7 +23,7 @@
     }
 }
 
-//botón de buscar
+/*-----button search*/
 .header__search__button {
     margin-bottom: 2%;
     padding: 1%;

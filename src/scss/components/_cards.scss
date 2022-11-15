@@ -1,7 +1,9 @@
+/*-----class for favourite elements*/
 .favourite {
     @include favourite;
 }
 
+/*-----principal container*/
 .section__list {
     gap: 10px;
     display: flex;
@@ -16,6 +18,7 @@
         justify-content: flex-start;
     }
 
+    /*-----style for all cards*/
     &__article {
         text-align: center;
         font-size: 20px;
@@ -39,7 +42,7 @@
     }
 }
 
-
+/*-----style for favourite side*/
 .aside__favourite {
     display: flex;
     flex-direction: column;
@@ -60,6 +63,7 @@
             @include favourite;
         }
 
+        /*-----style for "X" button in favorite cards*/
         &--div {
             color: $bordercolor;
             font-weight: 700;

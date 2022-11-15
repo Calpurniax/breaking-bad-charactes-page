@@ -1,8 +1,10 @@
+/*-----style for mark as favourite*/
 @mixin favourite {
     background-color: $favouritebackground;
     color: $favouritefont;
 }
 
+/*-----style for titles*/
 @mixin title {
     background-color: $titlebackgcolor;
     color: $titlecolor;
