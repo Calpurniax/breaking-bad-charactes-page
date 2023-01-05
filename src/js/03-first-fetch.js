@@ -13,7 +13,7 @@
 //     }
 //   });
 
-fetch('./services/data.json')
+fetch('../assets/services/data.json')
   .then((response) => response.json())
   .then((data) => {
     allCharacters = data;
