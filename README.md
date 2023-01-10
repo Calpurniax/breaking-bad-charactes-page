@@ -34,6 +34,6 @@ It consists on developing a web-site using HTML and Css/Sass and JS, with a free
 
 The project was typed with Visual Studio Code.
 The framework is the Adalab Web Starter Kit, which allows us to enjoy gulp without worries (among other things).
-The first idea was to use a fetch to a third party API, but sadly it's not working anymore.
+The first idea was to use a fetch to a third party API, but sadly it's not working anymore, so now it's working (thanks to amazing Adalabers) with a json file
 
 ### thank you and have fun!

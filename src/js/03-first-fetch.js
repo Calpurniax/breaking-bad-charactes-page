@@ -13,7 +13,7 @@
 //     }
 //   });
 
-fetch('../assets/services/data.json')
+fetch('../assets/data/data.json')
   .then((response) => response.json())
   .then((data) => {
     allCharacters = data;
@@ -24,5 +24,4 @@ fetch('../assets/services/data.json')
       renderAllCharacters(favCharacters, favList);
       markFavourites();
     }
-    console.log(allCharacters)
   });
