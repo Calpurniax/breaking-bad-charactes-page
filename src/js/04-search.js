@@ -18,15 +18,23 @@ function handleSearch(event) {
 */
 function handleSearch(event) {
   event.preventDefault();
+
   const userSearch = inputSearch.value;
+  //debugger;
   filterCharacters = allCharacters.filter(
-    (character) => character.status === userSearch
+    (character) => character.name.toLowerCase().includes(userSearch)
   );
   list.innerHTML = '';
   renderAllCharacters(filterCharacters, list);
   addEvent();
   markFavourites();
-  textParagraph.innerHTML = `Hay ${filterCharacters.length} resultados de su búsqueda`;
+  if (filterCharacters.length === 1) {
+    textParagraph.innerHTML = `Hay ${filterCharacters.length} resultado de su búsqueda`;
+  } else {
+    textParagraph.innerHTML = `Hay ${filterCharacters.length} resultados de su búsqueda`;
+
+  }
+
 }
 
 textParagraph.addEventListener('click', handleClickConsole);
